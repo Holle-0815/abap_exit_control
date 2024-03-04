@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Maintenance views for exit control</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZVC_CAEC_SWITCH_FRAMEWORKTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZVC_CAEC_SWITCH_FRAMEWORK</SOBJ_NAME>
+   </INCLUDES>
+  </asx:values>
+ </asx:abap>
+</abapGit>
