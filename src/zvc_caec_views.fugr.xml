@@ -1005,7 +1005,7 @@
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <FROM_DICT>X</FROM_DICT>
-       <MODIFIC>4</MODIFIC>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1678,7 +1678,7 @@
        <HEIGHT>001</HEIGHT>
        <FORMAT>CHAR</FORMAT>
        <FROM_DICT>X</FROM_DICT>
-       <MODIFIC>4</MODIFIC>
+       <MODIFIC>1</MODIFIC>
        <REQU_ENTRY>N</REQU_ENTRY>
        <TC_HEADING>X</TC_HEADING>
       </RPY_DYFATC>
@@ -1807,6 +1807,7 @@
        <FORMAT>NUMC</FORMAT>
        <FROM_DICT>X</FROM_DICT>
        <MODIFIC>X</MODIFIC>
+       <FOREIGNKEY>X</FOREIGNKEY>
        <OUTPUT_FLD>X</OUTPUT_FLD>
        <REQU_ENTRY>N</REQU_ENTRY>
        <DICT_I_FKY>X</DICT_I_FKY>
@@ -2045,9 +2046,6 @@
      </FIELDS>
      <FLOW_LOGIC>
       <RPY_DYFLOW>
-       <LINE>* VCL-Modifications</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
        <LINE>PROCESS BEFORE OUTPUT.</LINE>
       </RPY_DYFLOW>
       <RPY_DYFLOW>
@@ -2157,15 +2155,6 @@
       </RPY_DYFLOW>
       <RPY_DYFLOW>
        <LINE> MODULE LISTE_AFTER_LOOP.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>*</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>PROCESS ON VALUE-REQUEST.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>    FIELD  ZVC_CAEC_VALUE-NUM MODULE VCL_HELP_VALUES.</LINE>
       </RPY_DYFLOW>
      </FLOW_LOGIC>
     </item>

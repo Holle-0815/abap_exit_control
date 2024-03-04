@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZCA_EC_CHDAT</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>DATUM</DOMNAME>
+    <HEADLEN>08</HEADLEN>
+    <SCRLEN1>05</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Date of Last Change</DDTEXT>
+    <REPTEXT>Chngd On</REPTEXT>
+    <SCRTEXT_S>Chngd</SCRTEXT_S>
+    <SCRTEXT_M>Changed On</SCRTEXT_M>
+    <SCRTEXT_L>Changed On</SCRTEXT_L>
+    <APPLCLASS>SAP</APPLCLASS>
+    <DTELMASTER>E</DTELMASTER>
+    <DEFFDNAME>CH_ON</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>N</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Datum poslední změny</DDTEXT>
+     <REPTEXT>Změň.dne</REPTEXT>
+     <SCRTEXT_S>DatZm</SCRTEXT_S>
+     <SCRTEXT_M>Změněno dne</SCRTEXT_M>
+     <SCRTEXT_L>Změněno dne</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Datum der letzten Änderung</DDTEXT>
+     <REPTEXT>Geänd.am</REPTEXT>
+     <SCRTEXT_S>Ändg.</SCRTEXT_S>
+     <SCRTEXT_M>Geändert am</SCRTEXT_M>
+     <SCRTEXT_L>Geändert am</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Utolsó módosítás dátuma</DDTEXT>
+     <REPTEXT>Mód.dát.</REPTEXT>
+     <SCRTEXT_S>Mód.</SCRTEXT_S>
+     <SCRTEXT_M>Módosít. dátuma</SCRTEXT_M>
+     <SCRTEXT_L>Módosítás dátuma</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Datum van laatste wijziging</DDTEXT>
+     <REPTEXT>Wijz. op</REPTEXT>
+     <SCRTEXT_S>Wijz.</SCRTEXT_S>
+     <SCRTEXT_M>Gewijzigd op</SCRTEXT_M>
+     <SCRTEXT_L>Gewijzigd op</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

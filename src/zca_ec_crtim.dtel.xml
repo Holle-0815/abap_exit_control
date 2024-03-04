@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZCA_EC_CRTIM</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>UZEIT</DOMNAME>
+    <HEADLEN>10</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Entry time</DDTEXT>
+    <REPTEXT>Time</REPTEXT>
+    <SCRTEXT_S>Time</SCRTEXT_S>
+    <SCRTEXT_M>Time</SCRTEXT_M>
+    <SCRTEXT_L>Time</SCRTEXT_L>
+    <APPLCLASS>SAP</APPLCLASS>
+    <DTELMASTER>E</DTELMASTER>
+    <DEFFDNAME>REC_TIME</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>N</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Čas pořízení</DDTEXT>
+     <REPTEXT>Čas</REPTEXT>
+     <SCRTEXT_S>Čas</SCRTEXT_S>
+     <SCRTEXT_M>Čas</SCRTEXT_M>
+     <SCRTEXT_L>Čas</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Erfassungszeit</DDTEXT>
+     <REPTEXT>Uhrzeit</REPTEXT>
+     <SCRTEXT_S>Uhrzeit</SCRTEXT_S>
+     <SCRTEXT_M>Uhrzeit</SCRTEXT_M>
+     <SCRTEXT_L>Uhrzeit</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Rögzítés időpontja</DDTEXT>
+     <REPTEXT>Időpont</REPTEXT>
+     <SCRTEXT_S>Időpont</SCRTEXT_S>
+     <SCRTEXT_M>Időpont</SCRTEXT_M>
+     <SCRTEXT_L>Időpont</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Invoertijd</DDTEXT>
+     <REPTEXT>Tijdstip</REPTEXT>
+     <SCRTEXT_S>Tijdstip</SCRTEXT_S>
+     <SCRTEXT_M>Tijdstip</SCRTEXT_M>
+     <SCRTEXT_L>Tijdstip</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

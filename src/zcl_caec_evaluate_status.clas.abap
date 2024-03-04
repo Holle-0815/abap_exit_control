@@ -4,14 +4,17 @@ CLASS zcl_caec_evaluate_status DEFINITION
   CREATE PUBLIC .
 
   PUBLIC SECTION.
+    INTERFACES zif_caec_evaluate_status.
 
-    INTERFACES zif_caec_evaluate_status .
     ALIASES check FOR zif_caec_evaluate_status~check.
+    ALIASES main  FOR zif_caec_evaluate_status~main.
 
     METHODS constructor.
-    METHODS main IMPORTING i_num           TYPE zca_ec_number
-                           i_value_compare TYPE zca_ec_value_compare OPTIONAL
-                 RETURNING VALUE(r_result) TYPE abap_bool.
+
+    METHODS exit_generally_active IMPORTING i_num           TYPE zca_ec_number
+                                  RETURNING VALUE(r_result) TYPE abap_bool
+                                  RAISING   zcx_caec_exit_cntrl_not_found.
+
   PROTECTED SECTION.
   PRIVATE SECTION.
 ENDCLASS.
@@ -28,12 +31,9 @@ CLASS zcl_caec_evaluate_status IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD main.
+
     " check exit active
-    SELECT SINGLE FROM ztc_caec_main
-      FIELDS switch
-      WHERE num = @i_num
-      INTO @DATA(exit_generally_active).
-    IF exit_generally_active IS INITIAL.
+    IF exit_generally_active( i_num ) = abap_false.
       r_result = abap_false.
       EXIT.
     ENDIF.
@@ -64,6 +64,17 @@ CLASS zcl_caec_evaluate_status IMPLEMENTATION.
                      OR ( low <= i_value_compare-val AND high >= i_value_compare-val ) ).
       r_result = abap_true.
     ENDLOOP.
+  ENDMETHOD.
+
+
+  METHOD exit_generally_active.
+    SELECT SINGLE FROM ztc_caec_main
+    FIELDS switch
+    WHERE num = @i_num
+    INTO @r_result.
+    IF sy-subrc <> 0.
+      raise EXCEPTION type zcx_caec_exit_cntrl_not_found.
+    ENDIF.
   ENDMETHOD.
 
 ENDCLASS.

@@ -1,6 +1,6 @@
 *---------------------------------------------------------------------*
 *    program for:   VIEWPROC_ZVC_CAEC_VALUE
-*   generation date: 27.02.2024 at 14:38:07
+*   generation date: 04.03.2024 at 14:35:55
 *   view maintenance generator version: #001407#
 *---------------------------------------------------------------------*
 FUNCTION VIEWPROC_ZVC_CAEC_VALUE       .
