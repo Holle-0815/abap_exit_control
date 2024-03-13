@@ -15,19 +15,13 @@
     <DD07V>
      <VALPOS>0001</VALPOS>
      <DDLANGUAGE>E</DDLANGUAGE>
-     <DOMVALUE_L>A</DOMVALUE_L>
+     <DOMVALUE_L>X</DOMVALUE_L>
      <DDTEXT>active</DDTEXT>
     </DD07V>
     <DD07V>
      <VALPOS>0002</VALPOS>
      <DDLANGUAGE>E</DDLANGUAGE>
      <DDTEXT>inactive</DDTEXT>
-    </DD07V>
-    <DD07V>
-     <VALPOS>0003</VALPOS>
-     <DDLANGUAGE>E</DDLANGUAGE>
-     <DOMVALUE_L>P</DOMVALUE_L>
-     <DDTEXT>parameter_id</DDTEXT>
     </DD07V>
    </DD07V_TAB>
    <I18N_LANGS>
@@ -43,17 +37,12 @@
     <item>
      <VALPOS>0001</VALPOS>
      <DDLANGUAGE>D</DDLANGUAGE>
-     <DOMVALUE_L>A</DOMVALUE_L>
+     <DOMVALUE_L>X</DOMVALUE_L>
     </item>
     <item>
      <VALPOS>0002</VALPOS>
      <DDLANGUAGE>D</DDLANGUAGE>
      <DDTEXT>inaktiv</DDTEXT>
-    </item>
-    <item>
-     <VALPOS>0003</VALPOS>
-     <DDLANGUAGE>D</DDLANGUAGE>
-     <DOMVALUE_L>P</DOMVALUE_L>
     </item>
    </DD07_TEXTS>
   </asx:values>
