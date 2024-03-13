@@ -1,0 +1,61 @@
+*---------------------------------------------------------------------*
+*    view related data declarations
+*---------------------------------------------------------------------*
+*...processing: ZVC_CAEC_MAIN...................................*
+TABLES: ZVC_CAEC_MAIN, *ZVC_CAEC_MAIN. "view work areas
+CONTROLS: TCTRL_ZVC_CAEC_MAIN
+TYPE TABLEVIEW USING SCREEN '0001'.
+DATA: BEGIN OF STATUS_ZVC_CAEC_MAIN. "state vector
+          INCLUDE STRUCTURE VIMSTATUS.
+DATA: END OF STATUS_ZVC_CAEC_MAIN.
+* Table for entries selected to show on screen
+DATA: BEGIN OF ZVC_CAEC_MAIN_EXTRACT OCCURS 0010.
+INCLUDE STRUCTURE ZVC_CAEC_MAIN.
+          INCLUDE STRUCTURE VIMFLAGTAB.
+DATA: END OF ZVC_CAEC_MAIN_EXTRACT.
+* Table for all entries loaded from database
+DATA: BEGIN OF ZVC_CAEC_MAIN_TOTAL OCCURS 0010.
+INCLUDE STRUCTURE ZVC_CAEC_MAIN.
+          INCLUDE STRUCTURE VIMFLAGTAB.
+DATA: END OF ZVC_CAEC_MAIN_TOTAL.
+
+*...processing: ZVC_CAEC_MAIN_T.................................*
+TABLES: ZVC_CAEC_MAIN_T, *ZVC_CAEC_MAIN_T. "view work areas
+CONTROLS: TCTRL_ZVC_CAEC_MAIN_T
+TYPE TABLEVIEW USING SCREEN '0003'.
+DATA: BEGIN OF STATUS_ZVC_CAEC_MAIN_T. "state vector
+          INCLUDE STRUCTURE VIMSTATUS.
+DATA: END OF STATUS_ZVC_CAEC_MAIN_T.
+* Table for entries selected to show on screen
+DATA: BEGIN OF ZVC_CAEC_MAIN_T_EXTRACT OCCURS 0010.
+INCLUDE STRUCTURE ZVC_CAEC_MAIN_T.
+          INCLUDE STRUCTURE VIMFLAGTAB.
+DATA: END OF ZVC_CAEC_MAIN_T_EXTRACT.
+* Table for all entries loaded from database
+DATA: BEGIN OF ZVC_CAEC_MAIN_T_TOTAL OCCURS 0010.
+INCLUDE STRUCTURE ZVC_CAEC_MAIN_T.
+          INCLUDE STRUCTURE VIMFLAGTAB.
+DATA: END OF ZVC_CAEC_MAIN_T_TOTAL.
+
+*...processing: ZVC_CAEC_VALUE..................................*
+TABLES: ZVC_CAEC_VALUE, *ZVC_CAEC_VALUE. "view work areas
+CONTROLS: TCTRL_ZVC_CAEC_VALUE
+TYPE TABLEVIEW USING SCREEN '0002'.
+DATA: BEGIN OF STATUS_ZVC_CAEC_VALUE. "state vector
+          INCLUDE STRUCTURE VIMSTATUS.
+DATA: END OF STATUS_ZVC_CAEC_VALUE.
+* Table for entries selected to show on screen
+DATA: BEGIN OF ZVC_CAEC_VALUE_EXTRACT OCCURS 0010.
+INCLUDE STRUCTURE ZVC_CAEC_VALUE.
+          INCLUDE STRUCTURE VIMFLAGTAB.
+DATA: END OF ZVC_CAEC_VALUE_EXTRACT.
+* Table for all entries loaded from database
+DATA: BEGIN OF ZVC_CAEC_VALUE_TOTAL OCCURS 0010.
+INCLUDE STRUCTURE ZVC_CAEC_VALUE.
+          INCLUDE STRUCTURE VIMFLAGTAB.
+DATA: END OF ZVC_CAEC_VALUE_TOTAL.
+
+*.........table declarations:.................................*
+TABLES: ZTC_CAEC_MAIN                  .
+TABLES: ZTC_CAEC_VALUE                 .
+TABLES: ZTX_CAEC_MAIN                  .

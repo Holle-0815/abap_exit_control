@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZCA_EC_CRNAME</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>USNAM</DOMNAME>
+    <HEADLEN>12</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Name of Person Who Created the Object</DDTEXT>
+    <REPTEXT>Created By</REPTEXT>
+    <SCRTEXT_S>Created</SCRTEXT_S>
+    <SCRTEXT_M>Created By</SCRTEXT_M>
+    <SCRTEXT_L>Created By</SCRTEXT_L>
+    <APPLCLASS>SAP</APPLCLASS>
+    <DTELMASTER>E</DTELMASTER>
+    <DEFFDNAME>CREATED_BY</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>N</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Jméno referenta, který objekt založil</DDTEXT>
+     <REPTEXT>Založil</REPTEXT>
+     <SCRTEXT_S>Založeno</SCRTEXT_S>
+     <SCRTEXT_M>Založil</SCRTEXT_M>
+     <SCRTEXT_L>Založil</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Name des Sachbearbeiters, der das Objekt hinzugefügt hat</DDTEXT>
+     <REPTEXT>Angel.von</REPTEXT>
+     <SCRTEXT_S>Angelegt</SCRTEXT_S>
+     <SCRTEXT_M>Angelegt von</SCRTEXT_M>
+     <SCRTEXT_L>Angelegt von</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Az objektumot létrehozó ügyintéző neve</DDTEXT>
+     <REPTEXT>Létrehozta</REPTEXT>
+     <SCRTEXT_S>Létrehozta</SCRTEXT_S>
+     <SCRTEXT_M>Létrehozta</SCRTEXT_M>
+     <SCRTEXT_L>Létrehozta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Naam van de medewerker die het object heeft toegevoegd</DDTEXT>
+     <REPTEXT>Gecr.door</REPTEXT>
+     <SCRTEXT_S>Gecreëerd</SCRTEXT_S>
+     <SCRTEXT_M>Gecreëerd door</SCRTEXT_M>
+     <SCRTEXT_L>Gecreëerd door</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>DE</ID>
+      <OBJECT>ZCA_EC_CRNAME</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00004</TXTLINES>
+      <DOKSTATE>N</DOKSTATE>
+      <SELFDEF>2</SELFDEF>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZCA_EC_CRNAME</TDNAME>
+      <TDID>DE</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

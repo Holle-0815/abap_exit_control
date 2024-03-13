@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZCA_EC_CHTIM</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>UZEIT</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>10</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Time last change was made</DDTEXT>
+    <REPTEXT>TimeOfChng</REPTEXT>
+    <SCRTEXT_S>TimeOfChng</SCRTEXT_S>
+    <SCRTEXT_M>Time of change</SCRTEXT_M>
+    <SCRTEXT_L>Changed at</SCRTEXT_L>
+    <APPLCLASS>VCK</APPLCLASS>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>N</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Čas poslední změny</DDTEXT>
+     <REPTEXT>ČasZměny</REPTEXT>
+     <SCRTEXT_S>ČasZměny</SCRTEXT_S>
+     <SCRTEXT_M>Čas změny</SCRTEXT_M>
+     <SCRTEXT_L>Čas změny</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Zeitpunkt der letzten Änderung</DDTEXT>
+     <REPTEXT>ÄndZeit</REPTEXT>
+     <SCRTEXT_S>ÄndZeit</SCRTEXT_S>
+     <SCRTEXT_M>Änderungszeit</SCRTEXT_M>
+     <SCRTEXT_L>Änderungszeit</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Utolsó módosítás időpontja</DDTEXT>
+     <REPTEXT>Mód. időp.</REPTEXT>
+     <SCRTEXT_S>Mód. időp.</SCRTEXT_S>
+     <SCRTEXT_M>Módosít.időpont</SCRTEXT_M>
+     <SCRTEXT_L>Módosítás időpontja</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Tijdstip van laatste wijziging</DDTEXT>
+     <REPTEXT>Wijz.tijd</REPTEXT>
+     <SCRTEXT_S>Wijz.tijd</SCRTEXT_S>
+     <SCRTEXT_M>Wijzigingstijd</SCRTEXT_M>
+     <SCRTEXT_L>Wijzigingstijd</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

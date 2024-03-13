@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZCA_EC_CHNAM</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>USNAM</DOMNAME>
+    <HEADLEN>12</HEADLEN>
+    <SCRLEN1>06</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Name of person who changed object</DDTEXT>
+    <REPTEXT>Changed by</REPTEXT>
+    <SCRTEXT_S>Change</SCRTEXT_S>
+    <SCRTEXT_M>Changed by</SCRTEXT_M>
+    <SCRTEXT_L>Changed by</SCRTEXT_L>
+    <APPLCLASS>SAP</APPLCLASS>
+    <DTELMASTER>E</DTELMASTER>
+    <DEFFDNAME>CHANGED_BY</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>N</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Jméno referenta, který objekt změnil.</DDTEXT>
+     <REPTEXT>Změnil:</REPTEXT>
+     <SCRTEXT_S>Změnil</SCRTEXT_S>
+     <SCRTEXT_M>Změnil:</SCRTEXT_M>
+     <SCRTEXT_L>Změnil:</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Name des Sachbearbeiters, der das Objekt geändert hat.</DDTEXT>
+     <REPTEXT>Geändert von</REPTEXT>
+     <SCRTEXT_S>Von</SCRTEXT_S>
+     <SCRTEXT_M>Geändert von</SCRTEXT_M>
+     <SCRTEXT_L>Geändert von</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Az objektum módosítását végző ügyintéző neve</DDTEXT>
+     <REPTEXT>Módosította:</REPTEXT>
+     <SCRTEXT_S>Mód.:</SCRTEXT_S>
+     <SCRTEXT_M>Módosította:</SCRTEXT_M>
+     <SCRTEXT_L>Módosította:</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Naam van medewerker die het object heeft gewijzigd</DDTEXT>
+     <REPTEXT>Gewijz. door</REPTEXT>
+     <SCRTEXT_S>Door</SCRTEXT_S>
+     <SCRTEXT_M>Gewijzigd door</SCRTEXT_M>
+     <SCRTEXT_L>Gewijzigd door</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
