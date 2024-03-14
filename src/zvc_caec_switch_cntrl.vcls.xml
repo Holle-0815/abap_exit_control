@@ -58,13 +58,6 @@
      <PREDFIELD>NUM</PREDFIELD>
     </V_VCLSTDEP>
    </VCLSTRUDEP_TAB>
-   <VCLMF_TAB>
-    <V_VCLMF>
-     <VCLNAME>ZVC_CAEC_SWITCH_CNTRL</VCLNAME>
-     <EVENT>04</EVENT>
-     <FORMNAME>SET_DATA</FORMNAME>
-    </V_VCLMF>
-   </VCLMF_TAB>
   </asx:values>
  </asx:abap>
 </abapGit>
