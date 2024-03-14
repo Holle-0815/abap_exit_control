@@ -19,14 +19,5 @@ ENDCLASS.
 
 
 
-CLASS zcx_caec_exit_cntrl_not_found IMPLEMENTATION.
-  METHOD constructor ##ADT_SUPPRESS_GENERATION.
-    super->constructor( previous = previous ).
-    CLEAR me->textid.
-    IF textid IS INITIAL.
-      if_t100_message~t100key = if_t100_message=>default_textid.
-    ELSE.
-      if_t100_message~t100key = textid.
-    ENDIF.
-  ENDMETHOD.
+CLASS ZCX_CAEC_EXIT_CNTRL_NOT_FOUND IMPLEMENTATION.
 ENDCLASS.
