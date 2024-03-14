@@ -86,11 +86,481 @@
      <ETBF_VER_TABTYPE/>
     </ATTRIBUTES>
     <PARAMETERS>
-     <ETPAR_GUIX/>
-     <ETPAR_VARI/>
+     <ETPAR_GUIX>
+      <item>
+       <PNAME>GIVEN_CAEC_MAIN</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>Main Table of exit control</PDESC>
+       <PINDEX>0001</PINDEX>
+       <XMLREF_TYP>D</XMLREF_TYP>
+       <PSTRUC_TYP>T</PSTRUC_TYP>
+       <PREF_NAME>ZTY_CAEC_MAIN</PREF_NAME>
+       <PDATLEN>0000</PDATLEN>
+       <PINTLEN>000000</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0001</SORT_LNR>
+       <PREF_NAME2>ZTY_CAEC_MAIN</PREF_NAME2>
+       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VAL_TYPE>T</VAL_TYPE>
+       <TAB_INDEX>0</TAB_INDEX>
+       <DEEP_STRU>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.sap.com/2003/05/eCATT/ddic" version="1.0">
+         <xsd:complexType name="ZTY_CAEC_MAIN">
+          <annotation>
+           <documentation>I==O==C=T=K==D=ZTY_CAEC_MAIN=A=h=L=000000=doc=Table type of transp table ZTC_CAEC_MAIN</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="ZTC_CAEC_MAIN" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZTC_CAEC_MAIN">
+          <annotation>
+           <documentation>I==O==C=S=K==D=ZTC_CAEC_MAIN=A=u=L=000000=doc=Main Table of</documentation>
+          </annotation>
+          <sequence>
+           <element name="MANDT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K=X=D=MANDT=A=C=L=000003=doc=Client</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="3"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="NUM" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K=X=D=ZCA_EC_NUMBER=A=N=L=000006=doc=Number of enha</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="6"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ENHTYPE" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_ENHTYPE=A=C=L=000001=doc=Type of extens</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ENHNAME" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_ENHNAME=A=C=L=000030=doc=Name of Includ</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="30"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="SWITCH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_SWITCH=A=C=L=000001=doc=Switch for exte</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="PARID" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=MEMORYID=A=C=L=000020=doc=Set/Get parameter ID</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="20"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CRNAME" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CRNAME=A=C=L=000012=doc=Name of Person</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="12"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CRDATE" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CRDAT=A=D=L=000008=doc=Date on Which Re</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CRTIME" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CRTIM=A=T=L=000006=doc=Entry time</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="..:..:.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CHNAME" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CHNAM=A=C=L=000012=doc=Name of person w</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="12"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CHDATE" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CHDAT=A=D=L=000008=doc=Date of Last Cha</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CHTIME" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CHTIM=A=T=L=000006=doc=Time last change</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="..:..:.."/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+        </xsd:schema>
+       </DEEP_STRU>
+       <DEEP_DATA>
+        <ddic:ZTY_CAEC_MAIN xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic" empty="true">
+         <item>
+          <MANDT/>
+          <NUM/>
+          <ENHTYPE/>
+          <ENHNAME/>
+          <SWITCH/>
+          <PARID/>
+          <CRNAME/>
+          <CRDATE/>
+          <CRTIME/>
+          <CHNAME/>
+          <CHDATE/>
+          <CHTIME/>
+         </item>
+        </ddic:ZTY_CAEC_MAIN>
+       </DEEP_DATA>
+      </item>
+      <item>
+       <PNAME>GIVEN_CAEC_VALUE</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>Values to parametrize exit control</PDESC>
+       <PINDEX>0002</PINDEX>
+       <XMLREF_TYP>D</XMLREF_TYP>
+       <PSTRUC_TYP>T</PSTRUC_TYP>
+       <PREF_NAME>ZTY_CAEC_VALUE</PREF_NAME>
+       <PDATLEN>0000</PDATLEN>
+       <PINTLEN>000000</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0002</SORT_LNR>
+       <PREF_NAME2>ZTY_CAEC_VALUE</PREF_NAME2>
+       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VAL_TYPE>T</VAL_TYPE>
+       <TAB_INDEX>0</TAB_INDEX>
+       <DEEP_STRU>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.sap.com/2003/05/eCATT/ddic" version="1.0">
+         <xsd:complexType name="ZTY_CAEC_VALUE">
+          <annotation>
+           <documentation>I==O==C=T=K==D=ZTY_CAEC_VALUE=A=h=L=000000=doc=Table type of transp table ZTC_CAEC_VALUE</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="ZTC_CAEC_VALUE" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZTC_CAEC_VALUE">
+          <annotation>
+           <documentation>I==O==C=S=K==D=ZTC_CAEC_VALUE=A=u=L=000000=doc=Values to par</documentation>
+          </annotation>
+          <sequence>
+           <element name="MANDT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K=X=D=MANDT=A=C=L=000003=doc=Client</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="3"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="NUM" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K=X=D=ZCA_EC_NUMBER=A=N=L=000006=doc=Number of enha</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="6"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="POS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K=X=D=ZCA_EC_POSNUM=A=N=L=000004=doc=Position for e</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ELEMENT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ROLLNAME=A=C=L=000030=doc=Data element (semant</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="30"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="SIGN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=RALDB_SIGN=A=C=L=000001=doc=SIGN field in crea</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="OPT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=RSZ_OPERATOR=A=C=L=000002=doc=Operator in Sele</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOW" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_VALUE=A=C=L=000060=doc=Dim: Field for a</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="60"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HIGH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_VALUE=A=C=L=000060=doc=Dim: Field for a</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="60"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="SWITCH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_SWITCH=A=C=L=000001=doc=Switch for exte</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CRNAME" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CRNAME=A=C=L=000012=doc=Name of Person</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="12"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CRDATE" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CRDAT=A=D=L=000008=doc=Date on Which Re</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CRTIME" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CRTIM=A=T=L=000006=doc=Entry time</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="..:..:.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CHNAME" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CHNAM=A=C=L=000012=doc=Name of person w</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="12"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CHDATE" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CHDAT=A=D=L=000008=doc=Date of Last Cha</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CHTIME" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=ZCA_EC_CHTIM=A=T=L=000006=doc=Time last change</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="..:..:.."/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+        </xsd:schema>
+       </DEEP_STRU>
+       <DEEP_DATA>
+        <ddic:ZTY_CAEC_VALUE xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic" empty="true">
+         <item>
+          <MANDT/>
+          <NUM/>
+          <POS/>
+          <ELEMENT/>
+          <SIGN/>
+          <OPT/>
+          <LOW/>
+          <HIGH/>
+          <SWITCH/>
+          <CRNAME/>
+          <CRDATE/>
+          <CRTIME/>
+          <CHNAME/>
+          <CHDATE/>
+          <CHTIME/>
+         </item>
+        </ddic:ZTY_CAEC_VALUE>
+       </DEEP_DATA>
+      </item>
+     </ETPAR_GUIX>
+     <ETPAR_VARI>
+      <item>
+       <VAR_NAME>CHECK_SWITCH</VAR_NAME>
+       <VAR_DESC>Check extension is generally active</VAR_DESC>
+       <VINDEX>0001</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>GIVEN_CAEC_MAIN</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0001</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:ZTY_CAEC_MAIN xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <item>
+            <NUM>999901</NUM>
+           </item>
+           <item>
+            <NUM>999900</NUM>
+            <SWITCH>X</SWITCH>
+           </item>
+           <item>
+            <NUM>999902</NUM>
+            <PARID>ZECPID_99902</PARID>
+           </item>
+           <item>
+            <NUM>999903</NUM>
+            <SWITCH>X</SWITCH>
+           </item>
+           <item>
+            <NUM>999904</NUM>
+            <SWITCH>X</SWITCH>
+           </item>
+           <item>
+            <NUM>999905</NUM>
+            <PARID>ZECPID_99905</PARID>
+           </item>
+           <item>
+            <NUM>999906</NUM>
+            <SWITCH>X</SWITCH>
+           </item>
+          </ddic:ZTY_CAEC_MAIN>
+         </DEEP_DATA>
+        </item>
+        <item>
+         <PNAME>GIVEN_CAEC_VALUE</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0002</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:ZTY_CAEC_VALUE xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <item>
+            <NUM>999903</NUM>
+            <POS>10</POS>
+            <ELEMENT>VKORG</ELEMENT>
+            <LOW>0001</LOW>
+            <SWITCH>X</SWITCH>
+           </item>
+           <item>
+            <NUM>999904</NUM>
+            <POS>10</POS>
+            <ELEMENT>VKORG</ELEMENT>
+            <LOW>0001</LOW>
+           </item>
+           <item>
+            <NUM>999905</NUM>
+            <POS>10</POS>
+            <ELEMENT>VKORG</ELEMENT>
+            <LOW>0001</LOW>
+            <SWITCH>X</SWITCH>
+           </item>
+           <item>
+            <NUM>999906</NUM>
+            <POS>10</POS>
+            <ELEMENT>VKORG/VTWEG</ELEMENT>
+            <LOW>0001/001</LOW>
+            <SWITCH>X</SWITCH>
+           </item>
+          </ddic:ZTY_CAEC_VALUE>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+     </ETPAR_VARI>
     </PARAMETERS>
     <VARIANT_MODE>
-     <ETVAR_EXT/>
+     <ETVAR_EXT></ETVAR_EXT>
     </VARIANT_MODE>
    </ECTD>
   </VERSION>

@@ -11,19 +11,32 @@ CLASS ltc_evaluate_status DEFINITION FOR TESTING
     METHODS is_inactive_w_pid FOR TESTING RAISING cx_static_check.
     METHODS is_active_w_pid_wo_values FOR TESTING RAISING cx_static_check.
     METHODS is_active_w_values FOR TESTING RAISING cx_static_check.
-    METHODS is_active_w_val_all_swtd_off FOR TESTING RAISING cx_static_check.
+    METHODS is_inactive_w_val_all_swtd_off FOR TESTING RAISING cx_static_check.
     METHODS is_active_w_pid_w_values FOR TESTING RAISING cx_static_check.
+    METHODS no_data_in_tab_main FOR TESTING RAISING cx_static_check.
+
 ENDCLASS.
 
 
 CLASS ltc_evaluate_status IMPLEMENTATION.
   METHOD setup.
-    m_cut = NEW #( ).
+    DATA(dao_main) = NEW zcl_caec_get_main_from_tdc( ).
+    DATA(dao_value) = NEW zcl_caec_get_value_from_tdc( ).
+    m_cut = NEW #( i_dao_main = dao_main
+                   i_dao_value = dao_value ).
   ENDMETHOD.
 
   METHOD is_inactive.
     TRY.
         DATA(result) = m_cut->main( i_num = 999901 ).
+      CATCH zcx_caec_exit_cntrl_not_found.
+    ENDTRY.
+    cl_abap_unit_assert=>assert_false( act = result ).
+  ENDMETHOD.
+
+  METHOD no_data_in_tab_main.
+    TRY.
+        DATA(result) = m_cut->main( i_num = 999999 ).
       CATCH zcx_caec_exit_cntrl_not_found.
     ENDTRY.
     cl_abap_unit_assert=>assert_false( act = result ).
@@ -46,7 +59,7 @@ CLASS ltc_evaluate_status IMPLEMENTATION.
     cl_abap_unit_assert=>assert_true( act = result ).
   ENDMETHOD.
 
-  METHOD is_active_w_val_all_swtd_off.
+  METHOD is_inactive_w_val_all_swtd_off.
     DATA(result) = m_cut->main( i_num = 999904 i_value_compare = VALUE #( element = 'VKORG'
                                                                           val     = '0001' ) ).
     cl_abap_unit_assert=>assert_false( act = result ).
@@ -64,5 +77,4 @@ CLASS ltc_evaluate_status IMPLEMENTATION.
     DATA(result) = m_cut->main( i_num = 999902 ).
     cl_abap_unit_assert=>assert_false( act = result ).
   ENDMETHOD.
-
 ENDCLASS.

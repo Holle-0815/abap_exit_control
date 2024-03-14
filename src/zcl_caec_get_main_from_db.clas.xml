@@ -3,22 +3,14 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCX_CAEC_EXIT_CNTRL_NOT_FOUND</CLSNAME>
+    <CLSNAME>ZCL_CAEC_GET_MAIN_FROM_DB</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Value not maintained in exit control</DESCRIPT>
-    <CATEGORY>40</CATEGORY>
+    <DESCRIPT>Get data of table ztc_caec_from _db</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
    </VSEOCLASS>
-   <DESCRIPTIONS>
-    <SEOCOMPOTX>
-     <CMPNAME>CONSTRUCTOR</CMPNAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
-    </SEOCOMPOTX>
-   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

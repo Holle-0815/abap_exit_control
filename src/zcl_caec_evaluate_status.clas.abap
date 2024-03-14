@@ -10,7 +10,8 @@ CLASS zcl_caec_evaluate_status DEFINITION
     ALIASES main                      FOR zif_caec_evaluate_status~main.
     ALIASES tt_values_of_exit_control FOR zif_caec_evaluate_status~tt_values_of_exitcontrol.
 
-    METHODS constructor.
+    METHODS constructor IMPORTING i_dao_main TYPE REF TO zif_caec_dao_main OPTIONAL
+                                  i_dao_value TYPE REF TO zif_caec_dao_value OPTIONAL.
 
     METHODS exit_generally_active IMPORTING i_num           TYPE zca_ec_number
                                   RETURNING VALUE(r_result) TYPE abap_bool
@@ -21,6 +22,8 @@ CLASS zcl_caec_evaluate_status DEFINITION
 
   PROTECTED SECTION.
   PRIVATE SECTION.
+    DATA m_dao_main      TYPE REF TO zif_caec_dao_main. "zcl_caec_get_main_from_db.
+    DATA m_dao_value     TYPE REF TO zif_caec_dao_value.
     DATA m_num           TYPE zca_ec_number.
     DATA m_value_compare TYPE zca_ec_value_compare.
 
@@ -30,31 +33,38 @@ CLASS zcl_caec_evaluate_status DEFINITION
     METHODS is_exit_active_for_user IMPORTING i_num           TYPE zca_ec_number
                                     RETURNING VALUE(r_result) TYPE abap_bool.
     METHODS is_value_permitted
-      IMPORTING
-        i_list_of_values TYPE zif_caec_evaluate_status=>tt_values_of_exitcontrol
-      RETURNING
-        VALUE(r_result)  TYPE abap_bool.
+      IMPORTING i_list_of_values TYPE zif_caec_evaluate_status=>tt_values_of_exitcontrol
+      RETURNING VALUE(r_result)  TYPE abap_bool.
 ENDCLASS.
 
 
 CLASS zcl_caec_evaluate_status IMPLEMENTATION.
   METHOD is_extension_active.
-    r_result = NEW zcl_caec_evaluate_status( )->main( i_num           = i_num
-                                                      i_value_compare = i_value_compare ).
+*    r_result = NEW zcl_caec_evaluate_status( )->main( i_num           = i_num
+*                                                      i_value_compare = i_value_compare ).
   ENDMETHOD.
 
   METHOD constructor.
+    IF i_dao_main IS INITIAL.
+      m_dao_main = NEW zcl_caec_get_main_from_db( ).
+    ELSE.
+      m_dao_main = i_dao_main.
+    ENDIF.
 
+    IF i_dao_value IS INITIAL.
+      m_dao_value = NEW zcl_caec_get_value_from_db( ).
+    ELSE.
+      m_dao_value = i_dao_value.
+    ENDIF.
   ENDMETHOD.
 
   METHOD main.
-
     set_m_num( i_num ).
     set_m_value_compare( i_value_compare ).
 
     " check exit active
-    IF exit_generally_active( i_num ) = abap_false AND
-       is_exit_active_for_user( i_num ) = abap_false.
+    IF     exit_generally_active( i_num )   = abap_false
+       AND is_exit_active_for_user( i_num ) = abap_false.
       r_result = abap_false.
       EXIT.
     ENDIF.
@@ -69,34 +79,31 @@ CLASS zcl_caec_evaluate_status IMPLEMENTATION.
     IF is_value_permitted( list_of_values( i_num ) ) = abap_true.
       r_result = abap_true.
     ENDIF.
-
   ENDMETHOD.
 
 
   METHOD exit_generally_active.
-    SELECT SINGLE FROM ztc_caec_main
-    FIELDS switch
-    WHERE num = @i_num
-    INTO @r_result.
-    IF sy-subrc <> 0.
-      RAISE EXCEPTION TYPE zcx_caec_exit_cntrl_not_found.
-    ENDIF.
+    r_result = m_dao_main->read( i_num )-switch.
   ENDMETHOD.
 
   METHOD list_of_values.
-    SELECT FROM ztc_caec_value
-      FIELDS element, low, high, switch
-      WHERE num = @i_num
-        INTO TABLE @r_result.
+    TRY.
+        MOVE-CORRESPONDING m_dao_value->read_positions( i_num ) TO r_result.
+      CATCH zcx_caec_exit_cntrl_not_found.
+        EXIT.
+    ENDTRY.
     SORT r_result BY switch ASCENDING.
   ENDMETHOD.
 
   METHOD is_exit_active_for_user.
-    SELECT SINGLE FROM ztc_caec_main
-      FIELDS parid
-      WHERE num = @i_num
-        INTO @DATA(parameter_id_to_check).
-    IF sy-subrc <> 0 OR parameter_id_to_check IS INITIAL.
+    TRY.
+        DATA(parameter_id_to_check) = m_dao_main->read( i_num )-parid.
+      CATCH zcx_caec_exit_cntrl_not_found.
+        r_result = abap_false.
+        EXIT.
+    ENDTRY.
+
+    IF parameter_id_to_check IS INITIAL.
       r_result = abap_false.
       EXIT.
     ENDIF.
