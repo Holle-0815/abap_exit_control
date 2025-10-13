@@ -5,6 +5,25 @@
    <MASTER_LANGUAGE>E</MASTER_LANGUAGE>
    <STARTING_FOLDER>/src/</STARTING_FOLDER>
    <FOLDER_LOGIC>PREFIX</FOLDER_LOGIC>
+   <IGNORE>
+    <item>/src/zvc_caec_views.fugr.lzvc_caec_viewsf00.abap</item>
+    <item>/src/zvc_caec_views.fugr.lzvc_caec_viewsf00.xml</item>
+    <item>/src/zvc_caec_views.fugr.lzvc_caec_viewsi00.abap</item>
+    <item>/src/zvc_caec_views.fugr.lzvc_caec_viewsi00.xml</item>
+    <item>/src/zvc_caec_views.fugr.lzvc_caec_viewst00.abap</item>
+    <item>/src/zvc_caec_views.fugr.lzvc_caec_viewst00.xml</item>
+    <item>/src/zvc_caec_views.fugr.lzvc_caec_viewstop.abap</item>
+    <item>/src/zvc_caec_views.fugr.lzvc_caec_viewstop.xml</item>
+    <item>/src/zvc_caec_views.fugr.saplzvc_caec_views.abap</item>
+    <item>/src/zvc_caec_views.fugr.saplzvc_caec_views.xml</item>
+    <item>/src/zvc_caec_views.fugr.viewframe_zvc_caec_main.abap</item>
+    <item>/src/zvc_caec_views.fugr.viewframe_zvc_caec_main_t.abap</item>
+    <item>/src/zvc_caec_views.fugr.viewframe_zvc_caec_value.abap</item>
+    <item>/src/zvc_caec_views.fugr.viewproc_zvc_caec_main.abap</item>
+    <item>/src/zvc_caec_views.fugr.viewproc_zvc_caec_main_t.abap</item>
+    <item>/src/zvc_caec_views.fugr.viewproc_zvc_caec_value.abap</item>
+    <item>/src/zvc_caec_views.fugr.xml</item>
+   </IGNORE>
   </DATA>
  </asx:values>
 </asx:abap>

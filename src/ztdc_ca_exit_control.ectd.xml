@@ -100,7 +100,7 @@
        <PDECIMALS>000000</PDECIMALS>
        <SORT_LNR>0001</SORT_LNR>
        <PREF_NAME2>ZTY_CAEC_MAIN</PREF_NAME2>
-       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VALUE>&lt;VALUE&gt;</VALUE>
        <VAL_TYPE>T</VAL_TYPE>
        <TAB_INDEX>0</TAB_INDEX>
        <DEEP_STRU>
@@ -259,6 +259,8 @@
           <CHDATE/>
           <CHTIME/>
          </item>
+         
+        
         </ddic:ZTY_CAEC_MAIN>
        </DEEP_DATA>
       </item>
@@ -275,7 +277,7 @@
        <PDECIMALS>000000</PDECIMALS>
        <SORT_LNR>0002</SORT_LNR>
        <PREF_NAME2>ZTY_CAEC_VALUE</PREF_NAME2>
-       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VALUE>&lt;VALUE&gt;</VALUE>
        <VAL_TYPE>T</VAL_TYPE>
        <TAB_INDEX>0</TAB_INDEX>
        <DEEP_STRU>
@@ -468,6 +470,8 @@
           <CHDATE/>
           <CHTIME/>
          </item>
+         
+        
         </ddic:ZTY_CAEC_VALUE>
        </DEEP_DATA>
       </item>
